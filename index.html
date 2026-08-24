@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Shivtej Infra — Architecture, Interior, Construction & Landscape by Founder Sahil Pradip Waman." />
+  <title>Shivtej Infra | Architecture • Interior • Construction • Landscape</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#172019;--muted:#667064;--gold:#c8a85a;--gold2:#a9893f;--cream:#f6f4ed;--white:#fff;--line:#deded5;--dark:#101511}
+    *{box-sizing:border-box;margin:0;padding:0} html{scroll-behavior:smooth}
+    body{font-family:'DM Sans',sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+    a{text-decoration:none;color:inherit}.container{width:min(1180px,92%);margin:auto}
+    header{position:fixed;top:0;left:0;width:100%;z-index:20;background:rgba(246,244,237,.86);backdrop-filter:blur(16px);border-bottom:1px solid rgba(0,0,0,.07)}
+    nav{height:82px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:12px;font-weight:600;letter-spacing:.08em}.brand img{width:43px;height:52px;object-fit:contain}.brand span{font-size:15px}.links{display:flex;gap:30px;font-size:14px;color:#3e473f}.links a:hover{color:var(--gold2)}.menu{display:none;border:0;background:none;font-size:27px}
+    .hero{min-height:100vh;padding-top:82px;display:grid;grid-template-columns:1fr 1.1fr;align-items:center;gap:50px}.hero-copy{padding:70px 0}.eyebrow{text-transform:uppercase;letter-spacing:.25em;font-size:12px;color:var(--gold2);font-weight:600;margin-bottom:18px}.hero h1{font-family:'Playfair Display',serif;font-size:clamp(48px,6vw,84px);line-height:.98;font-weight:600;max-width:650px}.hero h1 em{color:var(--gold2);font-style:normal}.hero p{color:var(--muted);max-width:540px;margin:25px 0 30px;font-size:17px}.buttons{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 22px;border-radius:2px;font-size:14px;font-weight:600;border:1px solid var(--ink);transition:.25s}.btn.primary{background:var(--ink);color:white}.btn.primary:hover{background:#283329}.btn.light{border-color:var(--line);background:white}.hero-photo{height:720px;position:relative;overflow:hidden}.hero-photo img{width:100%;height:100%;object-fit:cover}.hero-photo:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 65%,rgba(16,21,17,.25))}.tag{position:absolute;z-index:2;bottom:22px;left:22px;background:rgba(255,255,255,.92);padding:12px 15px;font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+    section{padding:105px 0}.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:45px}.section-head h2{font-family:'Playfair Display',serif;font-size:clamp(36px,4vw,54px);line-height:1.05}.section-head p{max-width:430px;color:var(--muted)}
+    .about{background:white}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}.about-image{height:520px}.about-image img{width:100%;height:100%;object-fit:cover}.about-copy h3{font-family:'Playfair Display',serif;font-size:38px;margin-bottom:20px}.about-copy p{color:var(--muted);margin-bottom:17px}.founder{border-left:2px solid var(--gold);padding-left:18px;margin-top:28px}.founder strong{display:block;font-size:16px}.founder span{color:var(--muted);font-size:14px}
+    .services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}.service{background:var(--cream);padding:35px 28px;min-height:220px;transition:.25s}.service:hover{background:white;transform:translateY(-3px)}.num{color:var(--gold2);font-size:12px;letter-spacing:.15em}.service h3{font-family:'Playfair Display',serif;font-size:27px;margin:25px 0 10px}.service p{color:var(--muted);font-size:14px}
+    .projects{background:#182019;color:white}.projects .section-head p{color:#b9c1ba}.projects-grid{display:grid;grid-template-columns:1.25fr .75fr;grid-template-rows:300px 300px;gap:15px}.project{position:relative;overflow:hidden}.project:first-child{grid-row:span 2}.project img{width:100%;height:100%;object-fit:cover;transition:.6s}.project:hover img{transform:scale(1.04)}.project:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(0,0,0,.7))}.project-label{position:absolute;z-index:2;left:20px;bottom:18px}.project-label small{color:#d9bd71;text-transform:uppercase;letter-spacing:.15em}.project-label h3{font-family:'Playfair Display',serif;font-size:25px}
+    .process-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}.step{border-top:1px solid var(--line);padding-top:20px}.step b{font-size:12px;color:var(--gold2);letter-spacing:.15em}.step h3{font-family:'Playfair Display',serif;font-size:27px;margin:15px 0 8px}.step p{color:var(--muted);font-size:14px}
+    .contact{background:white}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px}.contact h2{font-family:'Playfair Display',serif;font-size:clamp(42px,5vw,65px);line-height:1.03}.contact-copy p{color:var(--muted);margin:20px 0 30px;max-width:480px}.contact-card{background:var(--ink);color:white;padding:40px}.contact-row{padding:18px 0;border-bottom:1px solid rgba(255,255,255,.15)}.contact-row:last-child{border-bottom:0}.contact-row small{display:block;color:#aeb8b0;text-transform:uppercase;letter-spacing:.13em;font-size:10px;margin-bottom:5px}.contact-row a{font-size:18px}.contact-row a:hover{color:#d9bd71}
+    footer{background:#0d120e;color:#aeb8b0;padding:25px 0;font-size:13px}.footer-inner{display:flex;justify-content:space-between;gap:20px}.gold{color:#d9bd71}
+    @media(max-width:850px){.links{display:none}.menu{display:block}.hero{grid-template-columns:1fr;gap:0}.hero-copy{padding:55px 0 35px}.hero-photo{height:550px}.about-grid,.contact-grid{grid-template-columns:1fr;gap:35px}.services-grid{grid-template-columns:1fr 1fr}.projects-grid{grid-template-columns:1fr;grid-template-rows:350px 250px 250px}.project:first-child{grid-row:auto}.process-grid{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:18px}.footer-inner{flex-direction:column}}
+    @media(max-width:520px){nav{height:72px}.brand img{width:36px;height:45px}.brand span{font-size:13px}.hero{padding-top:72px}.hero h1{font-size:49px}.hero p{font-size:15px}.hero-photo{height:460px}.services-grid{grid-template-columns:1fr}.about-image{height:430px}.projects-grid{grid-template-rows:320px 220px 220px}.contact-card{padding:28px 22px}}
+  </style>
+</head>
+<body>
+<header><div class="container"><nav>
+  <a class="brand" href="#home"><img src="assets/logo.png" alt="Shivtej Infra logo"><span>SHIVTEJ INFRA</span></a>
+  <div class="links"><a href="#about">About</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#contact">Contact</a></div>
+  <button class="menu" aria-label="Menu" onclick="document.querySelector('.links').classList.toggle('mobile')">☰</button>
+</nav></div></header>
+
+<main>
+<section class="hero" id="home"><div class="container hero-copy">
+  <div class="eyebrow">Architecture • Design • Build</div>
+  <h1>Spaces that feel <em>timeless.</em></h1>
+  <p>Shivtej Infra brings architecture, interiors, construction and landscape together to create thoughtful spaces made for modern living.</p>
+  <div class="buttons"><a class="btn primary" href="#projects">View Projects</a><a class="btn light" href="#contact">Start a Project</a></div>
+</div><div class="hero-photo"><img src="assets/project-01.jpeg" alt="Shivtej Infra residential project"><div class="tag">Residential Architecture</div></div></section>
+
+<section class="about" id="about"><div class="container about-grid"><div class="about-image"><img src="assets/project-02.jpeg" alt="Shivtej Infra completed residence"></div><div class="about-copy"><div class="eyebrow">About Shivtej Infra</div><h3>Designing with purpose. Building with precision.</h3><p>Shivtej Infra is an architecture and construction practice focused on creating distinctive residential and built environments. From the first sketch to the final finish, we aim for clarity, functionality and character.</p><p>Our integrated approach connects architectural design, interiors, construction execution and landscape into one seamless vision.</p><div class="founder"><strong>Founder — Sahil Pradip Waman</strong><span>Architectural Designer & Founder, Shivtej Infra</span></div></div></div></section>
+
+<section id="services"><div class="container"><div class="section-head"><h2>Our Services</h2><p>One team for the complete journey — from concept and planning to execution and the spaces around your building.</p></div><div class="services-grid">
+  <article class="service"><span class="num">01</span><h3>Architecture</h3><p>Concept design, planning, façade design, working drawings and thoughtful residential architecture.</p></article>
+  <article class="service"><span class="num">02</span><h3>Interior</h3><p>Warm, functional and contemporary interiors designed around the way you live and work.</p></article>
+  <article class="service"><span class="num">03</span><h3>Construction</h3><p>Quality-focused execution with attention to materials, detailing, coordination and finish.</p></article>
+  <article class="service"><span class="num">04</span><h3>Landscape</h3><p>Green outdoor environments that complement the architecture and make everyday spaces better.</p></article>
+</div></div></section>
+
+<section class="projects" id="projects"><div class="container"><div class="section-head"><h2>Selected Projects</h2><p>Residential work showcasing our approach to proportion, material, colour and detail.</p></div><div class="projects-grid">
+  <article class="project"><img src="assets/project-01.jpeg" alt="Residential project"><div class="project-label"><small>Project 01</small><h3>Contemporary Residence</h3></div></article>
+  <article class="project"><img src="assets/project-02.jpeg" alt="Modern residence"><div class="project-label"><small>Project 02</small><h3>Modern Family Home</h3></div></article>
+  <article class="project"><img src="assets/project-03.jpeg" alt="Residential façade"><div class="project-label"><small>Project 03</small><h3>Urban Residence</h3></div></article>
+</div></div></section>
+
+<section><div class="container"><div class="section-head"><h2>From idea to reality.</h2><p>A simple process keeps the design vision clear and the project moving.</p></div><div class="process-grid">
+  <div class="step"><b>01 / DISCOVER</b><h3>Understand</h3><p>We learn about your site, requirements, lifestyle, budget and aspirations.</p></div>
+  <div class="step"><b>02 / DESIGN</b><h3>Create</h3><p>We develop concepts, plans, elevations, materials and details into a cohesive design.</p></div>
+  <div class="step"><b>03 / DELIVER</b><h3>Build</h3><p>We coordinate execution and details to bring the designed space to life.</p></div>
+</div></div></section>
+
+<section class="contact" id="contact"><div class="container contact-grid"><div class="contact-copy"><div class="eyebrow">Let's work together</div><h2>Have a project in mind?</h2><p>Tell us what you're planning — a new home, renovation, interior, landscape or complete construction project.</p><div class="buttons"><a class="btn primary" href="https://wa.me/918805509900?text=Hello%20Shivtej%20Infra,%20I%20would%20like%20to%20discuss%20a%20project." target="_blank">WhatsApp Us</a><a class="btn light" href="mailto:shivtejinfra9@gmail.com">Email Us</a></div></div><div class="contact-card">
+  <div class="contact-row"><small>Phone / WhatsApp</small><a href="tel:+918805509900">+91 88055 09900</a></div>
+  <div class="contact-row"><small>Email</small><a href="mailto:shivtejinfra9@gmail.com">shivtejinfra9@gmail.com</a></div>
+  <div class="contact-row"><small>Founder</small><span>Sahil Pradip Waman</span></div>
+  <div class="contact-row"><small>Services</small><span>Architecture · Interior · Construction · Landscape</span></div>
+</div></div></section>
+</main>
+<footer><div class="container footer-inner"><span>© <span id="year"></span> Shivtej Infra. All rights reserved.</span><span>Designed for <span class="gold">better spaces.</span></span></div></footer>
+<script>
+  document.getElementById('year').textContent=new Date().getFullYear();
+  const links=document.querySelector('.links');
+  const style=document.createElement('style');
+  style.textContent='@media(max-width:850px){.links.mobile{display:flex;position:absolute;top:72px;left:0;width:100%;padding:20px;background:rgba(246,244,237,.98);flex-direction:column;gap:16px;border-bottom:1px solid #ddd}}';
+  document.head.appendChild(style);
+  document.querySelectorAll('.links a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('mobile')));
+</script>
+</body>
+</html>
